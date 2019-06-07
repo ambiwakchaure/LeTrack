@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LeTrack</string>
+    <string name="labor_not_found">Oops ! labor not found</string>
+    <string name="full_name">Full Name*</string>
+    <string name="mobile">Mobile*</string>
+    <string name="address">Address*</string>
+    <string name="charges_per_day">Charges (per Day in ₹)*</string>
+    <string name="submit">Submit</string>
+    <string name="labor_name">Enter labor name</string>
+    <string name="labor_mobile">Enter labor mobile</string>
+    <string name="labor_address">Enter labor address</string>
+    <string name="labor_charges">Enter labor charges</string>
+    <string name="labor_updated">Labor updated successfully</string>
+    <string name="labor_added">Labor added successfully</string>
+</resources>
