@@ -16,14 +16,16 @@ class TABLE_LABOR_CHARGES {
 
         //table column
         val LABOR_ID : String = "labor_id"
+        val ID : String = "id"
         val LABOR_CHARGES : String = "labor_charges"
+        val CREATED_DATE : String = "created_date"
 
 
         var CREATE_TABLE = ("CREATE TABLE " + TABLE_NAME
-                + "(" + TABLE_LABOR_MASTER.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + "(" + ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + LABOR_ID + " TEXT, "
                 + LABOR_CHARGES + " TEXT, "
-                + TABLE_LABOR_MASTER.CREATED_DATE + " TEXT)")
+                + CREATED_DATE + " TEXT)")
 
         //function for add new labor details
         fun addNewLaborCharges(labor_id : String, labor_charges: String)
@@ -34,33 +36,12 @@ class TABLE_LABOR_CHARGES {
             val values = ContentValues()
             values.put(LABOR_ID, labor_id)
             values.put(LABOR_CHARGES, labor_charges)
-            values.put(TABLE_LABOR_MASTER.CREATED_DATE, T.getSystemDateTime())
+            values.put(CREATED_DATE, T.getSystemDateTime())
 
             db.insert(TABLE_NAME, null, values)
 
         }
-        fun selectLaborChargesMaxId(): String {
 
-            var labor_chrg_maxid = "0"
-            try
-            {
-                val db = MyApplication.db!!.getReadableDatabase()
-                val uQuery = "SELECT $TABLE_LABOR_MASTER.ID FROM $TABLE_NAME ORDER BY ID DESC LIMIT 1"
-                var cursor = db.rawQuery(uQuery, null)
-
-                if (cursor.count > 0)
-                {
-                    if (cursor!!.moveToNext())
-                    {
-                        labor_chrg_maxid = cursor.getString(cursor.getColumnIndex(TABLE_LABOR_MASTER.ID))
-                    }
-                }
-
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-            return labor_chrg_maxid!!
-        }
         fun updateLaborCharges(labor_id : String,charges : String)
         {
             val db = MyApplication.db!!.getReadableDatabase()

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="10dp"
+            card_view:cardElevation="8dp">
+        <LinearLayout android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="8dp"
+                      android:orientation="vertical">
+            <LinearLayout android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+                <TextView android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:text="Labor Name"
+                          android:textStyle="bold"
+                          android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                          android:fontFamily="@font/samsungsansregular"
+                          android:layout_weight="1"
+                          android:id="@+id/labor_name_tv"/>
+                <TextView android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:text="Jan 2019"
+                          android:textColor="@color/colorGreen"
+                          android:fontFamily="@font/samsungsansregular"
+                          android:layout_weight="4"
+                          android:id="@+id/month_year_tv"/>
+            </LinearLayout>
+            <TextView android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Labor Charges : "
+                      android:layout_marginTop="3pt"
+                      android:fontFamily="@font/samsungsansregular"
+            android:id="@+id/labor_charges_tv"/>
+            <TextView android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="3pt"
+                      android:text="Total Paid Amount : "
+                      android:fontFamily="@font/samsungsansregular"
+                      android:id="@+id/total_paid_amt_tv"/>
+            <TextView android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Total Advance Amount : "
+                      android:layout_marginTop="3pt"
+                      android:fontFamily="@font/samsungsansregular"
+                      android:id="@+id/total_adv_amt_tv"/>
+            <TextView android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="3pt"
+                      android:text="Remaining Advance Amount : "
+                      android:fontFamily="@font/samsungsansregular"
+                      android:id="@+id/remain_adv_amt_tv"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

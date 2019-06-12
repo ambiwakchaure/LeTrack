@@ -91,8 +91,8 @@ class AddNewLaborActivity : AppCompatActivity() {
                 name_edt.text.toString(),
                 mobile_edt.text.toString(),
                 address_edt.text.toString())
-            var labor_id = TABLE_LABOR_CHARGES.selectLaborChargesMaxId()
-            TABLE_LABOR_CHARGES.addNewLaborCharges(""+(labor_id + 1),charges_edt.text.toString())
+            var labor_id = TABLE_LABOR_MASTER.selectLaborMaxId()
+            TABLE_LABOR_CHARGES.addNewLaborCharges(labor_id ,charges_edt.text.toString())
             //finally empty editext
             name_edt.setText("")
             mobile_edt.setText("")

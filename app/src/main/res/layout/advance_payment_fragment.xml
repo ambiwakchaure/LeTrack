@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="match_parent">
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="25pt">
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:orientation="vertical">
+        <android.support.v7.widget.RecyclerView android:layout_width="fill_parent"
+                                                android:layout_height="fill_parent"
+                                                android:layout_weight="1">
+
+        </android.support.v7.widget.RecyclerView>
+        <LinearLayout android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      android:orientation="vertical"
+                      android:layout_weight="5">
+            <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="Total Received Advanced Amount"
+                    android:fontFamily="@font/samsungsansregular"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="7pt"
+                    android:background="@color/colorPrimaryDark"/>
+            <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/samsungsansregular"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="7pt"
+                    android:text="Total Paid Advanced Amount"
+                    android:background="@color/colorGreen"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
