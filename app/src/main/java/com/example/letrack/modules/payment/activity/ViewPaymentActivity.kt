@@ -7,8 +7,7 @@ import android.widget.LinearLayout
 import com.example.letrack.R
 import com.example.letrack.database.TABLE_LABOR_MASTER
 import com.example.letrack.database.TABLE_LABOR_PAYMENT
-import com.example.letrack.modules.labbors.adapter.LaborPaymentAdapter
-import com.example.letrack.support.Constants
+import com.example.letrack.modules.payment.adapter.LaborPaymentHistoryAdapter
 import com.example.letrack.support.MyApplication
 import com.example.letrack.support.T
 import kotlinx.android.synthetic.main.activity_view_payment.*
@@ -39,7 +38,7 @@ class ViewPaymentActivity : AppCompatActivity() {
         {
            // hide_layout.setVisibility(View.GONE)
             view_payment_rv.layoutManager = LinearLayoutManager(MyApplication.context, LinearLayout.VERTICAL, false)
-            val adapter = LaborPaymentAdapter(LABORS);
+            val adapter = LaborPaymentHistoryAdapter(LABORS);
             view_payment_rv.adapter = adapter
             adapter.notifyDataSetChanged()
         }
