@@ -30,6 +30,12 @@ class PaymentHistoryActivity : AppCompatActivity() {
         tabs.setupWithViewPager(viewpager)
 
 
+        back_img.setOnClickListener {
+
+            finish()
+        }
+
+
     }
 
     private fun setupViewPager(viewpager: ViewPager?) {

@@ -44,6 +44,38 @@ class TABLE_LABOR_PAYMENT {
             db.insert(TABLE_NAME, null, values)
 
         }
+        fun getLaborPaymentHistory(l_id : String,month_year : String,payment_type : String): ArrayList<LaborPaymentInfo> {
+
+            var laborInfo = ArrayList<LaborPaymentInfo>()
+            var cursor: Cursor? = null
+
+            try
+            {
+                val db = MyApplication.db!!.getReadableDatabase()
+                val uQuery = "SELECT * FROM $TABLE_NAME WHERE $L_ID = '"+l_id+"' AND $CREATED_DATE LIKE '%"+month_year+"%' AND $PAYMENT_TYPE LIKE '%"+payment_type+"%'"
+                cursor = db.rawQuery(uQuery, null)
+
+                if (cursor.count > 0)
+                {
+                    while (cursor!!.moveToNext())
+                    {
+
+                        var PAYMENT_AMOUNT = cursor.getString(cursor.getColumnIndex(PAYMENT_AMOUNT))
+                        var CREATED_DATE = cursor.getString(cursor.getColumnIndex(CREATED_DATE))
+                        var PAYMENT_TYPE = cursor.getString(cursor.getColumnIndex(PAYMENT_TYPE))
+
+                        var date_time = CREATED_DATE.split(" ")
+                        laborInfo.add(LaborPaymentInfo(PAYMENT_AMOUNT,date_time.get(0),date_time.get(1),PAYMENT_TYPE))
+
+                    }
+                }
+
+            } catch (e: Exception) {
+                T.e("getLabor() : "+e)
+                e.printStackTrace()
+            }
+            return laborInfo!!
+        }
         /*//function for select labor details
         fun getLaborPayments(l_id : String,year : String): ArrayList<LaborPaymentInfo> {
 

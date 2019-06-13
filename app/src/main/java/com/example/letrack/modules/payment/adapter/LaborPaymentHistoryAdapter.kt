@@ -10,6 +10,7 @@ import android.widget.TextView
 import com.example.letrack.R
 import com.example.letrack.modules.labbors.pojo.LaborPaymentInfo
 import com.example.letrack.support.Constants
+import com.example.letrack.support.T
 
 class LaborPaymentHistoryAdapter (val userList: ArrayList<LaborPaymentInfo>) : RecyclerView.Adapter<LaborPaymentHistoryAdapter.ViewHolder>()
 {
@@ -43,12 +44,16 @@ class LaborPaymentHistoryAdapter (val userList: ArrayList<LaborPaymentInfo>) : R
             date_tv.setText(user.payment_date)
             time_tv.setText(user.payment_time)
 
-            if(user.payment_type.equals(Constants.PAYMENT_ADVANCE))
+
+            T.e("payment_type : "+user.payment_type)
+            if(user.payment_type.equals(Constants.PAYMENT_ADVANCE) || user.payment_type.equals(Constants.PAYMENT_PAYMENT))
             {
+                payment_type_img.setVisibility(View.VISIBLE)
                 payment_type_img.setImageResource(R.drawable.ic_keyboard_arrow_right_black_24dp)
             }
             else if(user.payment_type.equals(Constants.RETURN_ADVANCE))
             {
+                payment_type_img.setVisibility(View.VISIBLE)
                 payment_type_img.setImageResource(R.drawable.ic_keyboard_arrow_left_black_24dp)
             }
 
