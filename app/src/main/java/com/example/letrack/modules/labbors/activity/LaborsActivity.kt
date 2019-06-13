@@ -39,25 +39,18 @@ class LaborsActivity : AppCompatActivity() {
 
         if(LABORS.isEmpty())
         {
-
-            labors_list.setVisibility(View.GONE)
             hide_layout.setVisibility(View.VISIBLE)
             text_id.setText(getString(R.string.labor_not_found))
         }
         else
         {
-
-            labors_list.setVisibility(View.VISIBLE)
             hide_layout.setVisibility(View.GONE)
-
             labors_list.layoutManager = LinearLayoutManager(MyApplication.context, LinearLayout.VERTICAL, false)
             val adapter = LaborsAdapter(LABORS);
             labors_list.adapter = adapter
             adapter.notifyDataSetChanged()
         }
-
     }
-
     override fun onResume() {
         super.onResume()
         getLabors()

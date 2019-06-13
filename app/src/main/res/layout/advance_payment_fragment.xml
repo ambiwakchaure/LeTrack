@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="match_parent">
+    <LinearLayout android:layout_width="fill_parent"
+                  android:orientation="horizontal"
+                  android:layout_height="25pt">
+
+
+        <Button android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Select Month*"
+                android:textSize="7pt"
+                android:id="@+id/month_btn"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/samsungsansregular"
+                android:background="@color/colorPrimaryDark"/>
+
+
+        <Button android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+
+                android:id="@+id/year_btn"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:text="Select Year*"
+                android:textSize="7pt"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/samsungsansregular"
+                android:background="@color/colorGreen"/>
+
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:orientation="vertical">
+        <android.support.v7.widget.RecyclerView android:layout_width="fill_parent"
+                                                android:layout_height="fill_parent"
+                                                android:layout_weight="1">
+
+        </android.support.v7.widget.RecyclerView>
+        <LinearLayout android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      android:orientation="vertical"
+                      android:layout_weight="5">
+            <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="Advance"
+                    android:fontFamily="@font/samsungsansregular"
+                    android:textAllCaps="false"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10pt"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="7pt"
+                    android:id="@+id/advance_bt"
+                    android:background="@color/colorPrimaryDark"/>
+            <LinearLayout android:layout_width="fill_parent"
+                          android:layout_height="fill_parent"
+                          android:layout_weight="1"
+                          android:orientation="horizontal">
+                <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/samsungsansregular"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="7pt"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10pt"
+                        android:text="Returned"
+                        android:id="@+id/return_bt"
+                        android:background="@color/colorGreen"/>
+
+                <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/samsungsansregular"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="7pt"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10pt"
+                        android:text="Remaining"
+                        android:id="@+id/remain_bt"
+                        android:background="@color/colorGreen"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

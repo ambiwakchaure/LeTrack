@@ -5,6 +5,7 @@ import android.widget.EditText
 import android.widget.Toast
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
 
 
 class T {
@@ -46,5 +47,17 @@ class T {
                 return true
             }
         }
+        //get all years
+        fun getYears() : ArrayList<String>
+        {
+            var years = ArrayList<String>()
+            var thisYear = Calendar.getInstance().get(Calendar.YEAR)
+            for (i in 2019..thisYear) {
+                years.add(Integer.toString(i))
+            }
+
+            return years
+        }
     }
+
 }

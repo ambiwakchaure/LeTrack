@@ -10,6 +10,12 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".modules.payment.activity.PaymentHistoryActivity">
+        </activity>
+        <activity android:name=".modules.payment.activity.ViewPaymentActivity">
+        </activity>
+        <activity android:name=".modules.payment.activity.MakePaymentActivity">
+        </activity>
         <activity android:name=".modules.labbors.activity.AddNewLaborActivity">
         </activity>
         <activity android:name=".modules.authenticate.activity.LoginActivity">
